@@ -2,8 +2,7 @@ package ru.gb.family_tree;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Main implements Serializable {
     public static void main(String[] args) {

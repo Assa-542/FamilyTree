@@ -1,10 +1,11 @@
 package ru.gb.family_tree;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Main implements Serializable {
     public static void main(String[] args) {
         FamilyTree familytree = new FamilyTree();
         Human Natasha = new Human("Anastasia", Gender.Female, LocalDate.of(1952, 4, 28));

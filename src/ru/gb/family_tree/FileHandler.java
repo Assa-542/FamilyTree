@@ -35,6 +35,11 @@ public class FileHandler implements Writable {
 
     }
 
+    @Override
+    public void Save(Serializable var1, String var2) throws IOException {
+
+    }
+
     public Object load(String path) throws IOException, ClassNotFoundException {
         ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(path));
         return objectInputStream.readObject();

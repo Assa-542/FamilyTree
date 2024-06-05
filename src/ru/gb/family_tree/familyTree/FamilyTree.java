@@ -1,13 +1,17 @@
-package ru.gb.family_tree;
+package ru.gb.family_tree.familyTree;
+
+import ru.gb.family_tree.human.Human;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FamilyTree implements Serializable {
+public class FamilyTree implements Serializable, Iterable<Human> {
+    private long
     private static final long serialVersionUID = 1L;
     private List<Human> familytree;
     private long humansId;
+
 
 
     public FamilyTree(List<Human> familytree) {
@@ -85,6 +89,13 @@ public class FamilyTree implements Serializable {
             human2.setSpouse(human1);
         }
     }
+
+    public void sortByName() { humanList.sort (new FamilyTreeComparatorByName());}
+
+    public void sortByDeathDate() { humanList.sort(new FamilytreeComparatorByBirthDate());}
+
+    @Override
+    public iterator<human> iterator() { return  new FamilyTreeIterator(humanList); }
 
 
 }
